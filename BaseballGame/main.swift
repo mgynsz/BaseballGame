@@ -31,13 +31,13 @@ class BaseballGame {
             let result = compareNumbers(userNum)
             
             // 스트라이크/볼 결과 알려주기
-            if result.s == 3 {
+            if result.strike == 3 {
                 print("정답입니다! \n")
                 break
-            } else if result.s == 0 && result.b == 0 {
+            } else if result.strike == 0 && result.ball == 0 {
                 print("Nothing \n")
             } else {
-                print("\(result.s)스트라이크 \(result.b)볼 \n")
+                print("\(result.strike)스트라이크 \(result.ball)볼 \n")
             }
             
         }
@@ -51,7 +51,7 @@ class BaseballGame {
     }
     
     // 숫자 비교하기
-    func compareNumbers(_ userNumber: [Int]) -> (s: Int, b: Int) {
+    func compareNumbers(_ userNumber: [Int]) -> (strike: Int, ball: Int) {
         
         var strike = 0
         var ball = 0
